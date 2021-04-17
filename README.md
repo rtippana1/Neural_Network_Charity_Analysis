@@ -30,17 +30,17 @@ The goal was to attempt to develop a model with over 75% accuracy in predicting 
 
 1."IS_SUCCESSFUL"variable is considered as the target for the model.
 
-2. All other columns were considered potential features for the model.
+2.All other columns were considered potential features for the model.
 
 3."EIN" and "NAME" variables are neither targets nor features, and should be removed from the input data.
 
-4. Any "APPLICATION_TYPE" with less than 500 entries were binned into "OTHER".
+4.Any "APPLICATION_TYPE" with less than 500 entries were binned into "OTHER".
 
-5. Any **CLASSIFICATION** with less than 1800 entries were binned into "OTHER".
+5.Any **CLASSIFICATION** with less than 1800 entries were binned into "OTHER".
 
-6. All "object" type columns were encoded using OneHotEncoder.
+6.All "object" type columns were encoded using OneHotEncoder.
 
-7. All columns were then scaled using StandardScaler.
+7.All columns were then scaled using StandardScaler.
 
 ### Compiling, Training, and Evaluating the Model
 
