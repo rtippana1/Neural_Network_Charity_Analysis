@@ -28,28 +28,28 @@ The goal was to attempt to develop a model with over 75% accuracy in predicting 
 
 ### Data Preprocessing
 
-1."IS_SUCCESSFUL"variable is considered as the target for the model.
+* "IS_SUCCESSFUL"variable is considered as the target for the model.
 
-2.All other columns were considered potential features for the model.
+* All other columns were considered potential features for the model.
 
-3."EIN" and "NAME" variables are neither targets nor features, and should be removed from the input data.
+* "EIN" and "NAME" variables are neither targets nor features, and should be removed from the input data.
 
-4.Any "APPLICATION_TYPE" with less than 500 entries were binned into "OTHER".
+* Any "APPLICATION_TYPE" with less than 500 entries were binned into "OTHER".
 
-5.Any **CLASSIFICATION** with less than 1800 entries were binned into "OTHER".
+* Any **CLASSIFICATION** with less than 1800 entries were binned into "OTHER".
 
-6.All "object" type columns were encoded using OneHotEncoder.
+* All "object" type columns were encoded using OneHotEncoder.
 
-7.All columns were then scaled using StandardScaler.
+* All columns were then scaled using StandardScaler.
 
 ### Compiling, Training, and Evaluating the Model
 
 #### In the initial model i have used:
-1.Used two hidden layers -- one with 80 neurons, the second with 30 neurons -- providing 5,981 total and trainable parameters,as per the general standards its a good idea to have number of neurons as 2 times of the input variables.
+* Used two hidden layers -- one with 80 neurons, the second with 30 neurons -- providing 5,981 total and trainable parameters,as per the general standards its a good idea to have number of neurons as 2 times of the input variables.
 
-2.Have tried achieving the target model performance by using 'relu' activation functions for both input layers and 'sigmoid' activation function for the output layer and was able to acheive a accuracy of of 72.5% using the above model.
+* Have tried achieving the target model performance by using 'relu' activation functions for both input layers and 'sigmoid' activation function for the output layer and was able to acheive a accuracy of of 72.5% using the above model.
 
-3.I tried three more models in an attempt to reach 75% accuracy. In subsequent attempts I attempted:
+* I tried three more models in an attempt to reach 75% accuracy. In subsequent attempts I attempted:
 
 ##### Additional neurons are added to hidden layers
 * To increase the total number of trainable parameters to as high as 7,621 by adding additional neurons to layer 2.
