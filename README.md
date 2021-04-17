@@ -3,6 +3,7 @@ Charity organization analysis using neural networks
 
 ## Overview
 In this project, we will use the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup, a non-profit organization. The neural network we create will help the non-profit organization to analyze the impact of each donation and vet participants to ensure that all donations are being used efficiently. We want to predict which organizations are worth donating to and which are too high-risk. This problem is too complex for other machine learning models and thus we will use deep neural networks.
+
 The columns in the dataset included:
 * **EIN** and **NAME** — Identification columns
 * **APPLICATION_TYPE** — Alphabet Soup application type
@@ -27,14 +28,18 @@ The goal was to attempt to develop a model with over 75% accuracy in predicting 
 
 ### Data Preprocessing
 
-1.**IS_SUCCESSFUL** variable is considered as the target for the model.
-2. All other columns were considered potential features for the model.
-3.**EIN** and **NAME** variables are neither targets nor features, and should be removed from the input data.
+1."IS_SUCCESSFUL"variable is considered as the target for the model.
 
-The next steps were to bin, encode, and scale the data.
-4. Any **APPLICATION_TYPE** with less than 500 entries were binned into **OTHER**.
-5. Any **CLASSIFICATION** with less than 1800 entries were binned into **OTHER**.
+2. All other columns were considered potential features for the model.
+
+3."EIN" and "NAME" variables are neither targets nor features, and should be removed from the input data.
+
+4. Any "APPLICATION_TYPE" with less than 500 entries were binned into "OTHER".
+
+5. Any **CLASSIFICATION** with less than 1800 entries were binned into "OTHER".
+
 6. All "object" type columns were encoded using OneHotEncoder.
+
 7. All columns were then scaled using StandardScaler.
 
 ### Compiling, Training, and Evaluating the Model
