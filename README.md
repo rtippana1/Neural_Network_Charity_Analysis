@@ -1,3 +1,30 @@
+# Neural_Network_Charity_Analysis
+Charity organization analysis using neural networks
+
+## Overview
+In this project, we will use the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup, a non-profit organization. The neural network we create will help the non-profit organization to analyze the impact of each donation and vet participants to ensure that all donations are being used efficiently. We want to predict which organizations are worth donating to and which are too high-risk. This problem is too complex for other machine learning models and thus we will use deep neural networks.
+The columns in the dataset included:
+* **EIN** and **NAME** — Identification columns
+* **APPLICATION_TYPE** — Alphabet Soup application type
+* **AFFILIATION** — Affiliated sector of industry
+* **CLASSIFICATION** — Government organization classification
+* **USE_CASE** — Use case for funding
+* **ORGANIZATION** — Organization type
+* **STATUS** — Active status
+* **INCOME_AMT** — Income classification
+* **SPECIAL_CONSIDERATIONS** — Special consideration for application
+* **ASK_AMT** — Funding amount requested
+* **IS_SUCCESSFUL** — Was the money used effectively
+
+The libraries used were:
+* Pandas
+* Scikit-learn
+* Tensorflow
+
+The goal was to attempt to develop a model with over 75% accuracy in predicting success from the given data.
+
+## Results
+
 ### Data Preprocessing
 
 1.**IS_SUCCESSFUL** variable is considered as the target for the model.
@@ -12,27 +39,25 @@ The next steps were to bin, encode, and scale the data.
 
 ### Compiling, Training, and Evaluating the Model
 
-1.How many neurons, layers, and activation functions did you select for your neural network model, and why?
-2.Were you able to achieve the target model performance?
-3.What steps did you take to try and increase model performance?
-1.In the initial model I used:
-* two layers -- one with 80 neurons, the second with 30 neurons -- providing 5,981 total and trainable parameters;
-* both layers used 'relu' activation functions;
-* the output layer used 'sigmoid' activation function.
-2. I was able to acheive an of 72.5% using the above model.
-3.I tried increasing the total number of 
+#### In the initial model i have used:
+1.Used two hidden layers -- one with 80 neurons, the second with 30 neurons -- providing 5,981 total and trainable parameters,as per the general standards its a good idea to have number of neurons as 2 times of the input variables.
 
-I tried three more models in an attempt to reach 75% accuracy. In my subsequent attempts I attempted:
-* binning **INCOME_AMT** values greater than $5 million into a '5M+' bin;
-* adding a third hidden layer;
-* increasing the total number of trainable parameters to as high as 9,411;
-* increasing training epochs from 100 to 150, then as high as 300;
-* trying out both the 'adamax' and 'nadam' optimizers when compiling the model;
-* using 'tanh' activation functions on the hidden layers;
-* un-binning certain values by lowering the threshold from 1000 values to 700 values on both **APPLICATION_TYPE** and **CLASSIFICATION**.
+2.Have tried achieving the target model performance by using 'relu' activation functions for both input layers and 'sigmoid' activation function for the output layer and was able to acheive a accuracy of of 72.5% using the above model.
 
-Across all four of my attempts I never managed to raise my models' accuracy above 73%.
+3.I tried three more models in an attempt to reach 75% accuracy. In subsequent attempts I attempted:
+
+##### Additional neurons are added to hidden layers
+To increase the total number of trainable parameters to as high as 7,621 by adding additional neurons to layer 2.
+
+##### Additional hidden layers are added
+Added a third hidden layer 
+
+##### Activation function Change for Inputs
+Changed the activation functions on the hidden layers to 'tanh' and also tried out both the 'adamax' and 'nadam' optimizers while compiling the model and additionally increased training epochs from 100 to 300
+
+Across all three of my attempts I never managed to raise my models' accuracy above 73%.
 
 ## Summary
+Neural networks are powerful machine learning techniques that are modeled after neurons in the brain that are effective with complex datasets. Deep Neural networks are used for analyzing images and natural language processing datasets. An advantage of neural network machine learning is that it doesn't have to worry about any statistical theory. This form of machine learning is effective as it contains multiple layers of neurons that perform computations which are then connected and weighed against one another until a final layer is formed. They recognize patterns and features in input data and can be used for both classification and regression purposes. They are also effective at detecting complex nonlinear relationships and have a greater tolerance for messy data. Drawbacks to neural network algorithms are that they can be prone to overfitting and can create block boxes that are too complex for analysts to understand, however both of these problems can be mitigated and accounted for.
 
-We could use some other models like random forests or SVM which might yield better results.
+We could use some other models like random forests or SVM which might yield better accurancy rate.
