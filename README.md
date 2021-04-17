@@ -52,13 +52,15 @@ The goal was to attempt to develop a model with over 75% accuracy in predicting 
 3.I tried three more models in an attempt to reach 75% accuracy. In subsequent attempts I attempted:
 
 ##### Additional neurons are added to hidden layers
-To increase the total number of trainable parameters to as high as 7,621 by adding additional neurons to layer 2.
+* To increase the total number of trainable parameters to as high as 7,621 by adding additional neurons to layer 2.
 
 ##### Additional hidden layers are added
-Added a third hidden layer 
+* Added a third hidden layer 
 
 ##### Activation function Change for Inputs
-Changed the activation functions on the hidden layers to 'tanh' and also tried out both the 'adamax' and 'nadam' optimizers while compiling the model and additionally increased training epochs from 100 to 300
+* Changed the activation functions on the hidden layers to 'tanh' and also tried out both the 'adamax' and 'nadam' optimizers while compiling the model and additionally increased training epochs from 100 to 300.
+* Dropped the "SPECIAL_CONSIDERATIONS_N" as it was redundant to the "SPECIAL_CONSIDERATIONS_Y" column.
+
 
 Across all three of my attempts I never managed to raise my models' accuracy above 73%.
 
