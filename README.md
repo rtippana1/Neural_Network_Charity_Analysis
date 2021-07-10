@@ -1,5 +1,5 @@
 # Neural_Network_Charity_Analysis
-Charity organization analysis using neural networks
+Charity organization analysis using neural networks :-
 
 ## Overview
 In this project, we will use the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup, a non-profit organization. The neural network we create will help the non-profit organization to analyze the impact of each donation and vet participants to ensure that all donations are being used efficiently. We want to predict which organizations are worth donating to and which are too high-risk. This problem is too complex for other machine learning models and thus we will use deep neural networks.
